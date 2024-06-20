@@ -4,9 +4,6 @@ dotenv.config();
 const Order = require('../models/orderModel');
 const { createOrder, getAllOrders, getOrderById, updateOrder, deleteOrder } = require('../controllers/orderController');
 
-// Aumentar o timeout para 30 segundos
-jest.setTimeout(30000);
-
 beforeAll(async () => {
   await mongoose.connect(process.env.MONGO_URI);
 });
